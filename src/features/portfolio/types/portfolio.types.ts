@@ -62,6 +62,7 @@ export interface PortfolioContent {
   email: string
   phone: string
   socials: SocialLink[]
+  cv: SocialLink
   nav: { label: string; href: string }[]
   experience: ExperienceItem[]
   projects: ProjectItem[]

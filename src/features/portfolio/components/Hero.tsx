@@ -6,7 +6,7 @@ import type { PortfolioContent } from '../types/portfolio.types'
 interface HeroProps {
   content: Pick<
     PortfolioContent,
-    'name' | 'role' | 'summary' | 'monogram' | 'socials'
+    'name' | 'role' | 'summary' | 'monogram' | 'socials' | 'cv'
   >
 }
 
@@ -89,6 +89,14 @@ export function Hero({ content }: HeroProps) {
               className="inline-flex items-center justify-center rounded-xl border border-border bg-surface-elevated/70 px-5 py-3 text-sm font-semibold text-ink transition-colors hover:border-accent hover:text-accent"
             >
               Contact
+            </a>
+            <a
+              href={content.cv.href}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-xl border border-border bg-surface-elevated/70 px-5 py-3 text-sm font-semibold text-ink transition-colors hover:border-accent hover:text-accent"
+            >
+              {content.cv.label}
             </a>
             {github ? (
               <a

@@ -39,6 +39,7 @@ export function App() {
             summary: content.summary,
             monogram: content.monogram,
             socials: content.socials,
+            cv: content.cv,
           }}
         />
         <ExperienceSection items={content.experience} />
